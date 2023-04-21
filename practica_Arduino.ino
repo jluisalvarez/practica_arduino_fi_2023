@@ -34,9 +34,11 @@ void loop() {
     digitalWrite(Led, LOW);
   }
 
-  if (d<10) {
+  if (d<15&&d>5) {
     //analogWrite(Zumbador, 200);
-    tone(Zumbador, 440, 200);
+    tone(Zumbador, 400, 200);
+  } else if (d<=5) {
+    tone(Zumbador, 400);
   } else {
     //analogWrite(Zumbador, 0);
     noTone(Zumbador);
